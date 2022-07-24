@@ -5,9 +5,9 @@ specifiers:
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
   axios: ^0.27.2
-  country-flag-icons: ^1.5.5
   eslint: 8.20.0
   eslint-config-next: 12.2.3
+  flag-icons: ^6.6.4
   next: 12.2.3
   react: 18.2.0
   react-dom: 18.2.0
@@ -18,7 +18,7 @@ specifiers:
 
 dependencies:
   axios: 0.27.2
-  country-flag-icons: 1.5.5
+  flag-icons: 6.6.4
   next: 12.2.3_pmtxwaud2i7t46nnb7sfofmose
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -534,10 +534,6 @@ packages:
     requiresBuild: true
     dev: true
 
-  /country-flag-icons/1.5.5:
-    resolution: {integrity: sha512-k4WXZ/WvWOSiYXRG1n8EYHNr1m/IX0GffKqAidaet5DrJsDOmJ8Q/8JvvONhZNnKYg24s4lvsm+9og1HcuIU/g==}
-    dev: false
-
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -997,6 +993,10 @@ packages:
     dependencies:
       locate-path: 2.0.0
     dev: true
+
+  /flag-icons/6.6.4:
+    resolution: {integrity: sha512-hRRXKw3f5F2OCcDTOTXO0tc3ODqBx/ttA61V9mqy/hVbnFXzW+7tJMLQ+xd77+BXwdUzQAMLW2G4RZqqvaN3Mg==}
+    dev: false
 
   /flat-cache/3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}

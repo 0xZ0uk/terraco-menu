@@ -16,7 +16,10 @@ const Home: NextPage = () => {
       <main className={styles.container}>
         <div className={styles.countryContainer}>
           <Link href="/pt">
-            <PT className={styles.flagImg} height={180} />
+            <span
+              className="fi fis fi-pt"
+              style={{ width: 180, height: 180, borderRadius: "100%" }}
+            ></span>
           </Link>
           <Link href="/pt">
             <h2 className={styles.flagText}>Português</h2>
@@ -24,7 +27,10 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.countryContainer}>
           <Link href="/en">
-            <GB className={styles.flagImg} height={180} />
+            <span
+              className="fi fis fi-gb"
+              style={{ width: 180, height: 180, borderRadius: "100%" }}
+            ></span>
           </Link>
           <Link href="/en">
             <h2 className={styles.flagText}>English</h2>
