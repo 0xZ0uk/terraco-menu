@@ -82,7 +82,7 @@ const PT: NextPage = (props: any) => {
   );
 };
 
-export const getStaticProps = async (ctx: any) => {
+export const getServerSideProps = async (ctx: any) => {
   const prato = await axios({
     method: "GET",
     url: "https://api.baserow.io/api/database/rows/table/83811/?user_field_names=true",
