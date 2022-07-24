@@ -1,0 +1,71 @@
+@import "./normalize.scss";
+@import "./fonts.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #b67b44;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: "Bodoni SvtyTwo ITC TT", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Classico";
+  font-weight: bold;
+  color: white !important;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 0;
+  color: white !important;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 2.3em;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+[class*="icon-"]:before {
+  display: inline-block;
+  font-family: "Glyphter";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sgluten:before {
+  content: "\0041";
+}
+.icon-vegan:before {
+  content: "\0042";
+}
+.icon-vegetariano:before {
+  content: "\0043";
+}

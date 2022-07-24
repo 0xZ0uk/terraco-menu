@@ -1,0 +1,66 @@
+.itemContainer {
+  width: 90%;
+  margin: 25px 0;
+
+  .itemMain {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .itemName,
+  .itemPrice {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .itemName {
+    max-width: 75%;
+    color: white;
+    word-wrap: break-word;
+  }
+
+  .itemPrice {
+    color: white;
+  }
+
+  .itemIcon {
+    font-size: 26px;
+    padding: 0px 3px;
+  }
+
+  .itemIngredients {
+    max-width: 75%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    font-family: "Classico";
+    word-wrap: break-word;
+  }
+}
+
+.categoryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 120px;
+}
+
+@media screen and (min-width: 600px) {
+  .itemContainer {
+    width: 65%;
+    margin: 0 auto;
+    padding: 25px 0;
+
+    .itemName,
+    .itemPrice {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .itemIcon {
+      font-size: 36px;
+    }
+  }
+}
