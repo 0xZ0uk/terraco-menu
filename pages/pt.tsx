@@ -28,7 +28,9 @@ const PT: NextPage = (props: any) => {
           alt="banner terraço da alta"
           layout="responsive"
           width={windowSize.width}
-          height={windowSize.height}
+          height={
+            windowSize.width > 600 ? windowSize.height : windowSize.width / 1.8
+          }
         />
       </div>
       <div className={styles.tableContainer}>
