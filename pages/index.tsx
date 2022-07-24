@@ -14,18 +14,22 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.container}>
-        <Link href="/pt">
-          <div className={styles.countryContainer}>
+        <div className={styles.countryContainer}>
+          <Link href="/pt">
             <PT className={styles.flagImg} height={180} />
+          </Link>
+          <Link href="/pt">
             <h2 className={styles.flagText}>Português</h2>
-          </div>
-        </Link>
-        <Link href="/en">
-          <div className={styles.countryContainer}>
+          </Link>
+        </div>
+        <div className={styles.countryContainer}>
+          <Link href="/en">
             <GB className={styles.flagImg} height={180} />
+          </Link>
+          <Link href="/en">
             <h2 className={styles.flagText}>English</h2>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </main>
     </div>
   );

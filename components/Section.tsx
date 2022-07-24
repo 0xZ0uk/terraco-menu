@@ -49,7 +49,7 @@ const Section: React.FC<ISection> = ({
           )}
         </div>
         {open && (
-          <div>
+          <div style={{ width: "100%" }}>
             {categories.map((c, i) => (
               <CategoryList
                 style={{ backgroundColor: color.shade(i * 5).hexString() }}

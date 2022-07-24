@@ -64,7 +64,7 @@ const PT: NextPage = (props: any) => {
         />
         <Section
           title="Cafeteria, Refrigerantes e Cerveja"
-          categories={["Cerveja", "Águas", "Refrigerantes", "Cafetaria"]}
+          categories={["Cervejas", "Águas", "Refrigerantes", "Cafetaria"]}
           allItems={props.cafetaria}
           baseColor="#45586e"
         />
