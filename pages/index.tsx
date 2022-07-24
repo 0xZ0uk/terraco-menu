@@ -1,5 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import styles from "../styles/home.module.scss";
+import { GB, PT } from "country-flag-icons/react/1x1";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +13,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main className={styles.container}>
+        <div className={styles.countryContainer}>
+          <Link href="/pt">
+            <>
+              <PT className={styles.flagImg} height={180} />
+              <h2 className={styles.flagText}>Português</h2>
+            </>
+          </Link>
+        </div>
+
+        <div className={styles.countryContainer}>
+          <Link href="/en">
+            <>
+              <GB className={styles.flagImg} height={180} />
+              <h2 className={styles.flagText}>English</h2>
+            </>
+          </Link>
+        </div>
+      </main>
     </div>
   );
 };
