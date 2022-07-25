@@ -74,6 +74,7 @@ const PT: NextPage = (props: any) => {
             categories={winesList.pt}
             allItems={props.vinhos}
             baseColor="#a3777d"
+            wines
           />
         </div>
       </main>
