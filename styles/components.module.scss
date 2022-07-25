@@ -67,6 +67,18 @@
   padding-bottom: 120px;
 }
 
+.countryContainer {
+  cursor: pointer;
+  margin: 0 100px;
+  .flagImg {
+    border-radius: 100%;
+  }
+
+  .flagText {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .sectionContainer {
     .sectionTitleContainer {

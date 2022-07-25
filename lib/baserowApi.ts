@@ -1,23 +1,10 @@
 import axios from "axios";
 
-class BaserowAPI {
-  url: string;
-  token?: string;
-
-  constructor() {
-    this.url = "https://api.baserow.io";
-    this.token = process.env.NEXT_PUBLIC_API_TOKEN;
-  }
-
-  get(path: string) {
-    axios({
-      method: "GET",
-      url: this.url + path,
-      headers: {
-        Authorization: `Token ${this.token}`,
-      },
-    });
-  }
-}
-
-export default BaserowAPI;
+export const getBaserow = async (tableId: string) =>
+  await axios({
+    method: "GET",
+    url: `https://api.baserow.io/api/database/rows/table/${tableId}/?user_field_names=true`,
+    headers: {
+      Authorization: `Token ${process.env.NEXT_PUBLIC_API_TOKEN}`,
+    },
+  });
