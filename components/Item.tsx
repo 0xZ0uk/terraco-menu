@@ -28,13 +28,13 @@ const Item: React.FC<IItem> = ({
         <p className={styles.itemPrice}>{price}</p>
       </div>
       <div>
+        {!!ingredients && (
+          <p className={styles.itemIngredients}>{ingredients}</p>
+        )}
         {!!gluten && <span className={styles.itemIcon + " icon-sgluten"} />}
         {!!vegan && <span className={styles.itemIcon + " icon-vegan"} />}
         {!!vegetarian && (
           <span className={styles.itemIcon + " icon-vegetariano"} />
-        )}
-        {!!ingredients && (
-          <p className={styles.itemIngredients}>{ingredients}</p>
         )}
         {!!castas && <p className={styles.itemIngredients}>{castas}</p>}
       </div>
