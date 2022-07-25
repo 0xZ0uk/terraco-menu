@@ -29,7 +29,7 @@ const CategoryList: React.FC<ICategoryList> = ({
     return (
       <div style={style}>
         <h2 style={{ textAlign: "center", padding: "40px 0" }}>{title}</h2>
-        {title.includes("Vinho") || title.includes("Wine") ? (
+        {title === "Brancos" || title === "Tintos" || title.includes("Wine") ? (
           wineGroups.map((g) => (
             <div key={g} style={{ width: "100%" }}>
               <h3 style={{ textAlign: "center", fontSize: 26 }}>
