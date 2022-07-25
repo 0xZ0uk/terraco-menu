@@ -89,7 +89,7 @@ export const getServerSideProps = async (ctx: any) => {
     method: "GET",
     url: "https://api.baserow.io/api/database/rows/table/83811/?user_field_names=true",
     headers: {
-      Authorization: `Token se4P6VjcqwTLRnstfIc1dFiVvmg5VutG`,
+      Authorization: `Token ${process.env.NEXT_PUBLIC_API_TOKEN}`,
     },
   });
 
@@ -97,7 +97,7 @@ export const getServerSideProps = async (ctx: any) => {
     method: "GET",
     url: "https://api.baserow.io/api/database/rows/table/83816/?user_field_names=true",
     headers: {
-      Authorization: `Token se4P6VjcqwTLRnstfIc1dFiVvmg5VutG`,
+      Authorization: `Token ${process.env.NEXT_PUBLIC_API_TOKEN}`,
     },
   });
 
@@ -105,7 +105,7 @@ export const getServerSideProps = async (ctx: any) => {
     method: "GET",
     url: "https://api.baserow.io/api/database/rows/table/83819/?user_field_names=true",
     headers: {
-      Authorization: `Token se4P6VjcqwTLRnstfIc1dFiVvmg5VutG`,
+      Authorization: `Token ${process.env.NEXT_PUBLIC_API_TOKEN}`,
     },
   });
 
@@ -113,7 +113,7 @@ export const getServerSideProps = async (ctx: any) => {
     method: "GET",
     url: "https://api.baserow.io/api/database/rows/table/83822/?user_field_names=true",
     headers: {
-      Authorization: `Token se4P6VjcqwTLRnstfIc1dFiVvmg5VutG`,
+      Authorization: `Token ${process.env.NEXT_PUBLIC_API_TOKEN}`,
     },
   });
 
