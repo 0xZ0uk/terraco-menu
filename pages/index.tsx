@@ -4,12 +4,15 @@ import styles from "../styles/home.module.scss";
 import Link from "next/link";
 import CountryButton from "../components/CountryButton";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const goTo = (link: string) => {
     router.push(link);
+    setLoading(true);
   };
 
   return (
@@ -21,6 +24,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.container}>
+        {loading && <div className={styles.loader}></div>}
         <CountryButton
           country={{ short: "pt", long: "Português" }}
           onClick={() => goTo("/pt")}
