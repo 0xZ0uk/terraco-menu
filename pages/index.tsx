@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/home.module.scss";
 import Link from "next/link";
-import CountryButton from "../components/CountryButton";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -25,14 +25,24 @@ const Home: NextPage = () => {
 
       <main className={styles.container}>
         {loading && <div className={styles.loader}></div>}
-        <CountryButton
-          country={{ short: "pt", long: "Português" }}
-          onClick={() => goTo("/pt")}
-        />
-        <CountryButton
-          country={{ short: "gb", long: "English" }}
-          onClick={() => goTo("/en")}
-        />
+        <div className={styles.cardContainer} onClick={() => goTo("/pt")}>
+          <Image
+            src="/assets/img/button01.svg"
+            className="card-img-top"
+            alt="Português"
+            width={320}
+            height={280}
+          />
+        </div>
+        <div className={styles.cardContainer} onClick={() => goTo("/en")}>
+          <Image
+            src="/assets/img/button02.svg"
+            className="card-img-top"
+            alt="English"
+            width={320}
+            height={280}
+          />
+        </div>
       </main>
     </div>
   );
