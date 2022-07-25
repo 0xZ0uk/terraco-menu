@@ -2,8 +2,16 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/home.module.scss";
 import Link from "next/link";
+import CountryButton from "../components/CountryButton";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
+  const goTo = (link: string) => {
+    router.push(link);
+  };
+
   return (
     <div>
       <Head>
@@ -13,28 +21,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.container}>
-        <div className={styles.countryContainer}>
-          <Link href="/pt">
-            <span
-              className="fi fis fi-pt"
-              style={{ width: 180, height: 180, borderRadius: "100%" }}
-            ></span>
-          </Link>
-          <Link href="/pt">
-            <h2 className={styles.flagText}>Português</h2>
-          </Link>
-        </div>
-        <div className={styles.countryContainer}>
-          <Link href="/en">
-            <span
-              className="fi fis fi-gb"
-              style={{ width: 180, height: 180, borderRadius: "100%" }}
-            ></span>
-          </Link>
-          <Link href="/en">
-            <h2 className={styles.flagText}>English</h2>
-          </Link>
-        </div>
+        <CountryButton
+          country={{ short: "pt", long: "Português" }}
+          onClick={() => goTo("/pt")}
+        />
+        <CountryButton
+          country={{ short: "gb", long: "English" }}
+          onClick={() => goTo("/en")}
+        />
       </main>
     </div>
   );
