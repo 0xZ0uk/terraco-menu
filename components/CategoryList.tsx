@@ -23,6 +23,7 @@ const CategoryList: React.FC<ICategoryList> = ({
       "Rosés",
       "Vinho Verde",
       "Açores",
+      "Douro",
       "Lisboa",
     ];
 
