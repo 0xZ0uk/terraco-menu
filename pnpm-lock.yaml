@@ -11,6 +11,7 @@ specifiers:
   next: 12.2.3
   react: 18.2.0
   react-dom: 18.2.0
+  react-hotjar: ^5.0.0
   react-icons: ^4.4.0
   sass: ^1.54.0
   typescript: 4.7.4
@@ -22,6 +23,7 @@ dependencies:
   next: 12.2.3_pmtxwaud2i7t46nnb7sfofmose
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hotjar: 5.0.0
   react-icons: 4.4.0_react@18.2.0
   values.js: 2.1.1
 
@@ -1695,6 +1697,10 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hotjar/5.0.0:
+    resolution: {integrity: sha512-nEKDm+O5a77C9DlheuA9tz5rwhRjeIFPLhdvynGFxEYTT1qrYC3NU12Z9/tgvN2l9Tzyn7erUQ0C8fZHZBceTw==}
     dev: false
 
   /react-icons/4.4.0_react@18.2.0:
