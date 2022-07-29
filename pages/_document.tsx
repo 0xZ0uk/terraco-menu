@@ -9,6 +9,7 @@ export default function Document() {
           <Main />
           <NextScript />
           <Script
+            id="hotjar"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
