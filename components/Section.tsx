@@ -10,6 +10,7 @@ interface ISection {
   allItems: any;
   baseColor?: string;
   wines?: boolean;
+  notes?: any;
 }
 
 const Section: React.FC<ISection> = ({
@@ -18,6 +19,7 @@ const Section: React.FC<ISection> = ({
   allItems,
   baseColor,
   wines,
+  notes
 }) => {
   const [open, setOpen] = React.useState<boolean>(false);
   const color = new Values(baseColor);
@@ -57,6 +59,7 @@ const Section: React.FC<ISection> = ({
                 title={c}
                 items={allItems}
                 wines={wines}
+                notes={notes}
               />
             ))}
           </div>

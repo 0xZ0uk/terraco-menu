@@ -7,6 +7,7 @@ interface ICategoryList {
   items: any[];
   style?: any;
   wines?: boolean;
+  notes: any[];
 }
 
 const CategoryList: React.FC<ICategoryList> = ({
@@ -14,7 +15,11 @@ const CategoryList: React.FC<ICategoryList> = ({
   items,
   style,
   wines,
+  notes,
 }) => {
+  console.log()
+
+
   if (!!wines) {
     const wineGroups = [
       "Alentejo",
@@ -103,6 +108,7 @@ const CategoryList: React.FC<ICategoryList> = ({
             castas={item["Castas"]}
           />
         ))}
+      {!!notes && notes.filter((note: any) => note.Categoria?.value === title).map((n) => <div className={styles.note}><p key={n.id}>{n.Nota}</p></div>)}
     </div>
   );
 };
