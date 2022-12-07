@@ -28,6 +28,7 @@ const PT: NextPage = (props: any) => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
+
   return (
     <div>
       <Head>
@@ -56,18 +57,21 @@ const PT: NextPage = (props: any) => {
             categories={plateList.pt}
             allItems={props.noprato}
             baseColor="#b67b44"
+            notes={props.notas}
           />
           <Section
             title="Cocktails, Gins e Espirituosas"
             categories={[...cocktailList.base, ...cocktailList.pt]}
             allItems={props.cockatils}
             baseColor="#aaab8b"
+            notes={props.notas}
           />
           <Section
             title="Cafeteria, Refrigerantes e Cerveja"
             categories={cafeteriaList.pt}
             allItems={props.cafetaria}
             baseColor="#45586e"
+            notes={props.notas}
           />
           <Section
             title="Vinhos e Sangrias"
@@ -75,6 +79,7 @@ const PT: NextPage = (props: any) => {
             allItems={props.vinhos}
             baseColor="#a3777d"
             wines
+            notes={props.notas}
           />
         </div>
       </main>
@@ -82,18 +87,24 @@ const PT: NextPage = (props: any) => {
   );
 };
 
+function serialize(data: any) {
+  return JSON.parse(JSON.stringify(data))
+}
+
 export const getServerSideProps = async (ctx: any) => {
   const prato = await getBaserow("83811");
   const cocktails = await getBaserow("83816");
   const cafetaria = await getBaserow("83819");
   const vinhos = await getBaserow("83822");
+  const notas = await getBaserow("121050");
 
   return {
     props: {
-      noprato: JSON.parse(JSON.stringify(prato.data)).results,
-      cockatils: JSON.parse(JSON.stringify(cocktails.data)).results,
-      cafetaria: JSON.parse(JSON.stringify(cafetaria.data)).results,
-      vinhos: JSON.parse(JSON.stringify(vinhos.data)).results,
+      noprato: serialize(prato.data).results,
+      cockatils:serialize(cocktails.data).results,
+      cafetaria: serialize(cafetaria.data).results,
+      vinhos: serialize(vinhos.data).results,
+      notas: serialize(notas.data).results
     },
   };
 };

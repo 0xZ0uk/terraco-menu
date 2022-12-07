@@ -79,6 +79,20 @@
   }
 }
 
+.note {
+  width: 65%;
+  margin: 0 auto;
+  p {
+    text-align: left;
+    max-width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 26px;
+    font-weight: 700;
+    font-family: "Classico";
+    word-wrap: break-word;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .sectionContainer {
     .sectionTitleContainer {
