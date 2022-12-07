@@ -80,20 +80,21 @@
 }
 
 .note {
-  width: 65%;
+  width: 90%;
   margin: 0 auto;
   p {
     text-align: left;
     max-width: 100%;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 700;
     font-family: "Classico";
     word-wrap: break-word;
+    margin: 10px 0;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   .sectionContainer {
     .sectionTitleContainer {
       .sectionTitle {
@@ -115,6 +116,14 @@
 
     .itemIcon {
       font-size: 36px;
+    }
+  }
+
+  .note {
+    width: 65%;
+    p {
+      margin: 20px 0;
+      font-size: 24px;
     }
   }
 }
