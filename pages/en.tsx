@@ -55,18 +55,21 @@ const EN: NextPage = (props: any) => {
             categories={plateList.en}
             allItems={props.plate}
             baseColor="#b67b44"
+            notes={props.notes}
           />
           <Section
             title="Cocktails, Gins and Spirituous"
             categories={[...cocktailList.base, ...cocktailList.en]}
             allItems={props.cockatils}
             baseColor="#aaab8b"
+            notes={props.notes}
           />
           <Section
             title="Cafeteria, Soft Drinks & Beer"
             categories={cafeteriaList.en}
             allItems={props.cafetaria}
             baseColor="#45586e"
+            notes={props.notes}
           />
           <Section
             title="Wines and Sangrias"
@@ -74,6 +77,7 @@ const EN: NextPage = (props: any) => {
             allItems={props.vinhos}
             baseColor="#a3777d"
             wines
+            notes={props.notes}
           />
         </div>
       </main>
@@ -86,6 +90,7 @@ export const getServerSideProps = async (ctx: any) => {
   const cocktails = await getBaserow("84470");
   const cafetaria = await getBaserow("84472");
   const vinhos = await getBaserow("84474");
+  const notes = await getBaserow("121150");
 
   return {
     props: {
@@ -93,6 +98,7 @@ export const getServerSideProps = async (ctx: any) => {
       cockatils: JSON.parse(JSON.stringify(cocktails.data)).results,
       cafetaria: JSON.parse(JSON.stringify(cafetaria.data)).results,
       vinhos: JSON.parse(JSON.stringify(vinhos.data)).results,
+      notes: JSON.parse(JSON.stringify(notes.data)).results,
     },
   };
 };
