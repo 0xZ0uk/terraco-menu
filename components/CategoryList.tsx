@@ -108,7 +108,7 @@ const CategoryList: React.FC<ICategoryList> = ({
             castas={item["Castas"]}
           />
         ))}
-      {!!notes && notes.filter((note: any) => note.Categoria?.value === title).map((n) => <div className={styles.note}><p key={n.id}>{n.Nota}</p></div>)}
+      {!!notes && notes.filter((note: any) => note.Categoria?.value === title).map((n) => <div key={n.id} className={styles.note}><p>{n.Nota}</p></div>)}
     </div>
   );
 };
