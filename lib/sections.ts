@@ -2,7 +2,6 @@ export const plateList = {
   en: [
     "Appetizers",
     "Vegetarian",
-    "Pokebowls",
     "Meat",
     "Fish",
     "For the Children",
@@ -11,7 +10,6 @@ export const plateList = {
   pt: [
     "Petiscos",
     "Vegetariano",
-    "Pokebowls",
     "Carne",
     "Peixe",
     "Para as Crianças",
