@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/home.module.scss";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Image from "next/image";
+import MenuActions from "../components/MenuActions";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -25,6 +25,7 @@ const Home: NextPage = () => {
 
       <main className={styles.container}>
         {loading && <div className={styles.loader}></div>}
+        <MenuActions id="actions" />
         <div className={styles.cardContainer} onClick={() => goTo("/pt")}>
           <Image
             src="/assets/img/button01.svg"

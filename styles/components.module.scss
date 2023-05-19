@@ -94,6 +94,24 @@
   }
 }
 
+.actionsContainer {
+  width: 80%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  .action {
+    font-size: 18px;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    gap:5px;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .sectionContainer {
     .sectionTitleContainer {
@@ -127,3 +145,4 @@
     }
   }
 }
+
