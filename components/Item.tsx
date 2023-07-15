@@ -24,19 +24,23 @@ const Item: React.FC<IItem> = ({
   return (
     <div className={styles.itemContainer}>
       <div className={styles.itemMain}>
-        <p className={styles.itemName}>{name}</p>
-        <p className={styles.itemPrice}>{price}</p>
-      </div>
-      <div>
+        <div className={styles.itemWrapper}>
+          <p className={styles.itemName}>{name}</p>
+          <p className={styles.itemPrice}>{price}</p>
+        </div>
         {!!ingredients && (
           <p className={styles.itemIngredients}>{ingredients}</p>
         )}
-        {!!gluten && <span className={styles.itemIcon + " icon-sgluten"} />}
-        {!!vegan && <span className={styles.itemIcon + " icon-vegan"} />}
-        {!!vegetarian && (
-          <span className={styles.itemIcon + " icon-vegetariano"} />
-        )}
         {!!castas && <p className={styles.itemIngredients}>{castas}</p>}
+      </div>
+      <div>
+        <div>
+          {!!gluten && <span className={styles.itemIcon + " icon-sgluten"} />}
+          {!!vegan && <span className={styles.itemIcon + " icon-vegan"} />}
+          {!!vegetarian && (
+            <span className={styles.itemIcon + " icon-vegetariano"} />
+          )}
+        </div>
       </div>
     </div>
   );
